@@ -34,14 +34,16 @@ Other Tools: Multer for file uploads, CORS for cross-origin requests, dotenv for
 
 🔹 Installation
 1. Clone the Repository
-git clone https://github.com/yourusername/report-easy.git
+git clone https://github.com/Sumit84097/report-easy.git
 cd report-easy
 2. Backend Setup
 cd backend
 npm install
+
 Create a .env file and add your Google API key:
 
 GOOGLE_API_KEY=your_google_generative_ai_key
+
 Start the backend server:
 node server.js
 3. Frontend Setup
