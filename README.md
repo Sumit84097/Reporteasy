@@ -34,7 +34,7 @@ Other Tools: Multer for file uploads, CORS for cross-origin requests, dotenv for
 
 🔹 Installation
 1. Clone the Repository
-git clone https://github.com/Sumit84097/report-easy.git
+git clone https://github.com/Sumit84097/Reporteasy.git
 cd report-easy
 2. Backend Setup
 cd backend
@@ -92,7 +92,17 @@ Suggests 3 lifestyle or dietary tips.
 
 Includes a short safety note.
 
+🔹 Contributing
 
+Contributions are welcome! You can:
+
+Add more test definitions or languages.
+
+Improve OCR accuracy.
+
+Enhance UI/UX.
+
+Integrate additional AI features for more insights.
 
 
 
