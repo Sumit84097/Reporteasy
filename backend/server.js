@@ -1,5 +1,3 @@
-// server.js - CORRECTED AND ROBUST VERSION
-
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
@@ -11,10 +9,10 @@ require('dotenv').config(); // Load environment variables
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-// Initialize Gemini with the API Key from .env
+// Initializing Gemini with the API Key from .env
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
-// Use a stable model. You can change this to "gemini-2.5-flash" if your account supports it.
+// Use a stable model.
 const model = genAI.getGenerativeModel({
   model: "gemini-2.5-flash", 
 });
@@ -29,7 +27,7 @@ let knowledgeBase = {};
 try {
     knowledgeBase = JSON.parse(fs.readFileSync(path.join(__dirname, "knowledgeBase.json"), "utf8"));
 } catch (error) {
-    console.warn("⚠️ Warning: knowledgeBase.json not found. Explanations might be missing.");
+    console.warn("Warning: knowledgeBase.json not found. Explanations might be missing.");
 }
 
 const testDefinitions = {
@@ -185,7 +183,7 @@ async function getAISummary(structuredData, language) {
     return JSON.parse(text);
 
   } catch (error) {
-    console.error("❌ AI Summarization Error:", error);
+    console.error("AI Summarization Error:", error);
     return {
       keyFindings: ["Error generating summary."],
       overallConclusion: "We could not analyze the text details at this moment.",
