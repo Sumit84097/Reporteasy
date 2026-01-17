@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+🩺 Report Easy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Report Easy is a web application that allows users to upload medical lab reports (images or PDFs) and automatically analyzes them to provide structured test results, AI-generated summaries, and lifestyle suggestions in multiple languages (English, Hindi, Tamil). The platform is designed to help patients quickly understand their blood test results in a simple and actionable way.
 
-## Available Scripts
+🔹 Features
 
-In the project directory, you can run:
+Upload Lab Reports: Supports image (PNG, JPEG) and PDF formats.
 
-### `npm start`
+OCR Processing: Uses Tesseract.js to extract text from lab reports.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Data Correction: Automatic correction of common OCR errors for accuracy.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Structured Test Results: Extracts test values, reference ranges, and determines status (Normal/High/Low).
 
-### `npm test`
+Multi-Language Support: Provides explanations in English, Hindi, and Tamil.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+AI-Powered Summary: Uses Google Gemini AI to generate key findings, conclusions, and lifestyle tips.
 
-### `npm run build`
+Consult a Doctor: Quick WhatsApp link for professional consultation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clean UI: Drag-and-drop interface with modern design and responsive layout.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔹 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend: React, React Dropzone
 
-### `npm run eject`
+Backend: Node.js, Express
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+OCR & Image Processing: Tesseract.js, Sharp
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+AI Summarization: Google Gemini AI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Other Tools: Multer for file uploads, CORS for cross-origin requests, dotenv for environment variables
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔹 Installation
+1. Clone the Repository
+git clone https://github.com/yourusername/report-easy.git
+cd report-easy
+2. Backend Setup
+cd backend
+npm install
+Create a .env file and add your Google API key:
 
-## Learn More
+GOOGLE_API_KEY=your_google_generative_ai_key
+Start the backend server:
+node server.js
+3. Frontend Setup
+cd ../frontend
+npm install
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔹 Usage
 
-### Code Splitting
+Open the app in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Select the language (English/Hindi/Tamil).
 
-### Analyzing the Bundle Size
+Drag-and-drop or click to upload your lab report (PNG, JPEG, PDF).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Click Analyze Report.
 
-### Making a Progressive Web App
+View structured test results and AI-generated summary.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Optionally, click Consult a Doctor to reach out via WhatsApp.
 
-### Advanced Configuration
+🔹 Supported Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Some of the blood tests supported:
 
-### Deployment
+Hemoglobin, RBC Count, PCV, MCV, MCH, MCHC
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+RDW, RDW-CV, RDW-SD
 
-### `npm run build` fails to minify
+Total WBC Count, Neutrophils, Lymphocytes, Eosinophils, Monocytes, Basophils
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Platelet Count, MPV, PDW, PCT
+
+Test explanations are available in English, Hindi, and Tamil.
+
+🔹 AI Summary
+
+Highlights abnormal test results.
+
+Generates 3 key findings in simple language.
+
+Provides a conclusion.
+
+Suggests 3 lifestyle or dietary tips.
+
+Includes a short safety note.
+
+
+
+
+
+
+
+
+
